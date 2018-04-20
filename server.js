@@ -30,7 +30,7 @@ var Pet = mongoose.model('Pet')
 mongoose.Promise = global.Promise;
 //find pets
 app.get('/pets', function(req, res){
-	Pet.find({}, function(err, pets){
+	Pet.find({}).sort({type: 1}).exec(function(err, pets){
 		res.json(pets)
 	})
 })
