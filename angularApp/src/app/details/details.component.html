@@ -1,11 +1,27 @@
-<h2>Pet Shelter</h2>
-<h5>Details about {{pet.name}}</h5>
-<h5>Pet Type:</h5><p>{{pet.type}}</p>
-<h5>Description:</h5><p>{{pet.description}}</p>
-<h5>Skills:</h5>
-<li *ngIf='pet.skill_1.length >1'>{{pet.skill_1}}</li>
-<li *ngIf='pet.skill_2.length >1'>{{pet.skill_2}}</li>
-<li *ngIf='pet.skill_3.length >1'>{{pet.skill_3}}</li>
-<h3>Likes:</h3><p>{{pet.likes}}</p>
+<h3>Details about {{pet.name}}</h3><a [routerLink]="['']">Home</a>
+
+<table>
+	<tr>
+		<td><h5>Pet Type:</h5></td>
+		<td><p>{{pet.type}}</p></td>
+	</tr>
+	<tr>
+		<td><h5>Description:</h5></td>
+		<td><p>{{pet.description}}</p></td>
+	</tr>
+	<tr>
+		<td><h5>Skills:</h5></td>
+		<td><li *ngIf='pet.skill_1.length >1'>{{pet.skill_1}}</li>
+		<li *ngIf='pet.skill_2.length >1'>{{pet.skill_2}}</li>
+		<li *ngIf='pet.skill_3.length >1'>{{pet.skill_3}}</li></td>
+	</tr>
+	<tr>
+		<td><h5>Likes:</h5></td>
+		<td><p>{{pet.likes}}</p></td>
+	</tr>
+</table>
+
+
+
 <button (click)='likeThePet()'>Like this pet!</button>
 <button (click)='deleteThePet()'>Adopt this pet!</button>

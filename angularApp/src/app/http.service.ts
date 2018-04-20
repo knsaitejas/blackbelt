@@ -8,7 +8,7 @@ export class HttpService {
 
   createPet(object){
   	console.log(object)
-  	return this._http.post('/pets',{name: object.name, type: object.type, description: object.description, skill_1: object.skill_1, skill_2: object.skill_2, skill_3: object.skill_3})
+  	return this._http.post('/new',{name: object.name, type: object.type, description: object.description, skill_1: object.skill_1, skill_2: object.skill_2, skill_3: object.skill_3})
   }
 
   getPets(){
@@ -16,7 +16,7 @@ export class HttpService {
   }
 
   getPet(id){
-  	return this._http.get('/pets/'+id)
+  	return this._http.get('/details/'+id)
   }
 
   likePet(id){
@@ -29,7 +29,7 @@ export class HttpService {
 
   editPet(id, object){
   	console.log(id, object)
-  	return this._http.put('/pet/'+id, {name: object.name, type: object.type, description: object.description, skill_1: object.skill_1, skill_2: object.skill_2, skill_3: object.skill_3})
+  	return this._http.put('/edit/'+id, {name: object.name, type: object.type, description: object.description, skill_1: object.skill_1, skill_2: object.skill_2, skill_3: object.skill_3})
   }
 
 }

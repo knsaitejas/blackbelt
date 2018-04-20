@@ -1,4 +1,4 @@
-<h2>Add a pet to the shelter</h2>
+<h2>Know of a pet needing a home?</h2>
 <p>{{errors.error.errors['name']['message']}}</p>
 <p>{{errors.error.errors['type']['message']}}</p>
 <p>{{errors.error.errors['description']['message']}}</p>
@@ -7,7 +7,7 @@
 	Pet name: <input type="text" name="newPet.name" [(ngModel)]='newPet.name'>
 	Pet type: <input type="text" name="newPet.type" [(ngModel)]='newPet.type'>
 	Description: <input type="text" name="newPet.description" [(ngModel)]='newPet.description'>
-	Skills:
+	<p>Skills:</p>
 	Skill 1: <input type="text" name="newPet.skill_1" [(ngModel)]='newPet.skill_1'>
 	Skill 2: <input type="text" name="newPet.skill_2" [(ngModel)]='newPet.skill_2'>
 	Skill 3: <input type="text" name="newPet.skill_3" [(ngModel)]='newPet.skill_3'>

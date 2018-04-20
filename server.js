@@ -35,7 +35,7 @@ app.get('/pets', function(req, res){
 	})
 })
 //create pet
-app.post('/pets', function(req, res){
+app.post('/new', function(req, res){
 	console.log('in the server.js folder')
 	console.log(req.body)
 	var petInstance = new Pet()
@@ -55,7 +55,7 @@ app.post('/pets', function(req, res){
 	})
 })
 //find a pet
-app.get('/pets/:id', function(req, res){
+app.get('/details/:id', function(req, res){
 	Pet.findOne({_id: req.params.id}, function(err, pet){
 		if (err){
 			res.json({'error':err})
@@ -91,7 +91,7 @@ app.delete('/pet/:id', function(req, res){
 	})
 })
 //edit a pet
-app.put('/pet/:id', function(req, res){
+app.put('/edit/:id', function(req, res){
 	console.log(req.params.id)
 	Pet.findOne({_id: req.params.id}, function(err, pet){
 	pet.name = req.body.name
