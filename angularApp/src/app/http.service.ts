@@ -32,4 +32,8 @@ export class HttpService {
   	return this._http.put('/edit/'+id, {name: object.name, type: object.type, description: object.description, skill_1: object.skill_1, skill_2: object.skill_2, skill_3: object.skill_3})
   }
 
+  checkPetName(name){
+    return this._http.get('/name/'+name)
+  }
+
 }

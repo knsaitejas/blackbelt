@@ -36,7 +36,6 @@ app.get('/pets', function(req, res){
 })
 //create pet
 app.post('/new', function(req, res){
-	console.log('in the server.js folder')
 	console.log(req.body)
 	var petInstance = new Pet()
 	petInstance.name = req.body.name
@@ -54,17 +53,27 @@ app.post('/new', function(req, res){
 		}
 	})
 })
-//find a pet
+//find a pet by id
 app.get('/details/:id', function(req, res){
 	Pet.findOne({_id: req.params.id}, function(err, pet){
 		if (err){
-			res.json({'error':err})
+			
 		} else {
 			res.json(pet)
 		}
 	})
 })
-
+//find a pet by name
+app.get('/name/:name', function(req, res){
+	Pet.findOne({name: req.params.name}, function(err, pet){
+		if (err){
+			res.json({'message':'no pet with that name'})
+		} else {
+			console.log('pet with that name exists')
+			res.json({'exists':'pet with that name exists'})
+		}
+	})
+})
 //like a pet
 app.get('/pet/vote/:id', function(req, res){
 	console.log('just liked')

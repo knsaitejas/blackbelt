@@ -2,6 +2,7 @@
 <p>{{errors.error.errors['name']['message']}}</p>
 <p>{{errors.error.errors['type']['message']}}</p>
 <p>{{errors.error.errors['description']['message']}}</p>
+<p>{{errors['message']}}</p>
 
 <form (submit)='onSubmit()'>
 	Pet name: <input type="text" name="newPet.name" [(ngModel)]='newPet.name'>

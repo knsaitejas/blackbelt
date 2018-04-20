@@ -10,6 +10,6 @@
 	<tr *ngFor='let pet of pets'>
 		<th>{{pet.name}}</th>
 		<th>{{pet.type}}</th>
-		<th><a [routerLink]="['details/', pet._id]">Details</a> | <a [routerLink]="['edit/', pet._id]">Edit</a></th>
+		<th><a [routerLink]="['/detailss/', pet._id]">Details</a> | <a [routerLink]="['edit/', pet._id]">Edit</a></th>
 	</tr>
 </table>

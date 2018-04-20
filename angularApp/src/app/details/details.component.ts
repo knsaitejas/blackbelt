@@ -10,6 +10,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class DetailsComponent implements OnInit {
 	id: any;
 	pet: any;
+  show: any;
   constructor(private _httpService: HttpService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -17,6 +18,7 @@ export class DetailsComponent implements OnInit {
   		this.id=params.id
   		console.log(this.id)
   	})
+    this.show = true;
   	this.getPetFromService()
   }
 
@@ -34,6 +36,7 @@ export class DetailsComponent implements OnInit {
   	observable.subscribe(data=>{
   		console.log(data)
   		this.getPetFromService()
+      this.show = false
   	})
   }
 

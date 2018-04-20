@@ -23,5 +23,5 @@
 
 
 
-<button (click)='likeThePet()'>Like this pet!</button>
+<button *ngIf = 'show'(click)='likeThePet()'>Like this pet!</button>
 <button (click)='deleteThePet()'>Adopt this pet!</button>
