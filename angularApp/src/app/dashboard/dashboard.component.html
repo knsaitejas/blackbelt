@@ -1,0 +1,2 @@
+<a [routerLink]="['add']">Add a pet to the shelter!</a>
+<li *ngFor='let pet of pets'>{{pet.name}} | {{pet.type}} | <a [routerLink]="['details/', pet._id]">Details</a> | <a [routerLink]="['edit/', pet._id]">Edit</a></li>

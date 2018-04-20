@@ -1,0 +1,14 @@
+<p>{{errors.error.errors['name']['message']}}</p>
+<p>{{errors.error.errors['type']['message']}}</p>
+<p>{{errors.error.errors['description']['message']}}</p>
+<form (submit)='editThePet()'>
+	Pet name: <input type="text" name="updatePet.name" [(ngModel)]='pet.name'>
+	Pet type: <input type="text" name="updatePet.type" [(ngModel)]='pet.type'>
+	Description: <input type="text" name="updatePet.description" [ngModel]='pet.description'>
+	Skills:
+	Skill 1: <input type="text" name="updatePet.skill_1" [(ngModel)]='pet.skill_1'>
+	Skill 2: <input type="text" name="updatePet.skill_2" [(ngModel)]='pet.skill_2'>
+	Skill 3: <input type="text" name="updatePet.skill_3" [(ngModel)]='pet.skill_3'>
+	<input type="submit" name="submit" value="Edit Pet">
+	<button (click)='onCancel()'>Cancel</button>
+</form>
